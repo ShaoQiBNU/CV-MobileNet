@@ -55,7 +55,7 @@ MobileNets
 
 > MobileNets的各层结构如下：
 
-![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/3.png)
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/4.png)
 
 # 四. 代码
 
