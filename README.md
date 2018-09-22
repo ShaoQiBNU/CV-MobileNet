@@ -9,7 +9,7 @@ MobileNets
 
 > MobileNets模型基于深度可分解的卷积，它可以将标准卷积分解成一个深度卷积和一个点卷积（1 × 1卷积核）。深度卷积将每个卷积核应用到每一个通道，而1 × 1卷积用来组合通道卷积的输出。后文证明，这种分解可以有效减少计算量，降低模型大小，下面图说明了标准卷积是如何进行分解的（假设stride=1，padding为same，则输出size不变）：
 
-img111111
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/1.png)
 
 ## 1.标准卷积过程
 
@@ -51,13 +51,11 @@ img111111
 
 > MobileNets Body Architecture由多个深度可分解卷积单元叠加而成，共1 + 2*13 + 1 = 28层。其采用的深度可分解卷积单元如图所示：
 
-img22222
-
-
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/2.png)
 
 > MobileNets的各层结构如下：
 
-img333333
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/3.png)
 
 # 四. 代码
 
