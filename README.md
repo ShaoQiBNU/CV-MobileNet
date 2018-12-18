@@ -206,3 +206,36 @@ with tf.Session() as sess:
         batch_x, batch_y = mnist.test.next_batch(batch_size_test)
         print("Testing Accuracy:", sess.run(accuracy, feed_dict={x: batch_x, y: batch_y}))
 ```
+
+# 五. MobileNet V2
+
+> 和MobileNet V1相比，MobileNet V2主要的改进有两点：
+>
+> 1. Linear Bottlenecks，该结构去掉了小维度输出层后面的非线性激活层，目的是为了保证模型的表达能力；
+> 2. Inverted Residuals，该结构和传统residual block中维度先缩减再扩增正好相反，因此shotcut也就变成了连接的是维度缩减后的feature map。
+
+## (一) Linear Bottlenecks
+
+> Linear Bottlenecks的主要改进在于在网络中的每个bottleneck里，第二个conv1×1后面并没有接relu，而是用linear，如图所示：
+
+Img5
+
+
+
+
+## (二) Inverted Residuals
+
+> 传统的residuals block属于沙漏形状，即input和output很宽，中间接了一个降维的bottleneck layer；但是mobilnet V2更像是一个梭子形状，即input和output较窄，中间是一个升维的layer，如图所示：
+
+Img6
+
+## (三) 网络结构
+
+> MobileNet V2的网络结构如图所示：
+
+img7
+
+## (四) 
+
+> 利用MNIST数据集，构建MobileNets网络，查看网络效果，由于输入为28 x 28，所以最后的全局池化没有用到，代码如下：
+
