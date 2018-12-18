@@ -235,7 +235,7 @@ with tf.Session() as sess:
 
 ![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/8.png)
 
-## (四) 
+## (四) 代码
 
 > 利用MNIST数据集，构建MobileNets网络，查看网络效果，由于输入为28 x 28，所以最后的全局池化没有用到，代码如下：
 
