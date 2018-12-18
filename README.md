@@ -218,22 +218,22 @@ with tf.Session() as sess:
 
 > Linear Bottlenecks的主要改进在于在网络中的每个bottleneck里，第二个conv1×1后面并没有接relu，而是用linear，如图所示：
 
-Img5
-
-
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/5.png)
 
 
 ## (二) Inverted Residuals
 
 > 传统的residuals block属于沙漏形状，即input和output很宽，中间接了一个降维的bottleneck layer；但是mobilnet V2更像是一个梭子形状，即input和output较窄，中间是一个升维的layer，如图所示：
 
-Img6
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/6.png)
 
 ## (三) 网络结构
 
 > MobileNet V2的网络结构如图所示：
 
-img7
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/7.png)
+
+![image](https://github.com/ShaoQiBNU/MobileNet/blob/master/images/8.png)
 
 ## (四) 
 
