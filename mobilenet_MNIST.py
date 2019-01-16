@@ -85,9 +85,6 @@ def MobileNet(x, n_classes):
     ####### out 输出，10类 可根据数据集进行调整 ########
     out = tf.layers.dense(flatten, n_classes)
 
-    ####### softmax ########
-    out = tf.nn.softmax(out)
-
     return out
 
 
