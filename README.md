@@ -39,6 +39,9 @@ MobileNets
 >
 >   对于上一步得到的<a href="https://www.codecogs.com/eqnedit.php?latex=M" target="_blank"><img src="https://latex.codecogs.com/svg.latex?M" title="M" /></a>个特征图作为<a href="https://www.codecogs.com/eqnedit.php?latex=M" target="_blank"><img src="https://latex.codecogs.com/svg.latex?M" title="M" /></a>个通道的输入，采用<a href="https://www.codecogs.com/eqnedit.php?latex=N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?N" title="N" /></a>个<a href="https://www.codecogs.com/eqnedit.php?latex=1\times&space;1\times&space;M" target="_blank"><img src="https://latex.codecogs.com/svg.latex?1\times&space;1\times&space;M" title="1\times 1\times M" /></a>的卷积核进行标准卷积，得到<a href="https://www.codecogs.com/eqnedit.php?latex=D_{f}\times&space;D_{f}\times&space;M" target="_blank"><img src="https://latex.codecogs.com/svg.latex?D_{f}\times&space;D_{f}\times&space;M" title="D_{f}\times D_{f}\times M" /></a>的输出，这一步的计算量为<a href="https://www.codecogs.com/eqnedit.php?latex=D_{f}\times&space;D_{f}\times&space;M\times&space;N" target="_blank"><img src="https://latex.codecogs.com/svg.latex?D_{f}\times&space;D_{f}\times&space;M\times&space;N" title="D_{f}\times D_{f}\times M\times N" /></a>
 
+
+> separable convolution 详解见：https://yinguobing.com/separable-convolution/
+
 ## 3. 计算量对比
 
 > 将1和2的计算量进行对比，如下：
